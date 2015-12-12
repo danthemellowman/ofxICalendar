@@ -36,7 +36,7 @@ void ofApp::setup()
     // "https://www.google.com/calendar/ical/christopherbaker.net_91ul9n5dq2b6pkmin511q3bq14%40group.calendar.google.com/public/basic.ics";
 
     // update it every minute
-    calendar = ICalendar::makeShared("basic.ics", 60000);
+    calendar = ICalendar::makeShared("https://calendar.google.com/calendar/ical/makeitdoathing.com_7kieebr4tbgsiqdv3df3bsjo98%40group.calendar.google.com/private-f310053c4fa127f6b9b971b857fa5ca6/basic.ics", 60000);
 
     calendar->reload();
     calendar->startThread();

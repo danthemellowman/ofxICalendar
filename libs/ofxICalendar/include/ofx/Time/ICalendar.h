@@ -44,6 +44,7 @@
 #include "ofURLFileLoader.h"
 #include "ofFileUtils.h"
 #include "ofEvents.h"
+#include "ofThread.h"
 
 
 namespace ofx {
@@ -245,14 +246,14 @@ public:
 
             if (loadURI(_uri, buffer))
             {
-                //cout << "success!." << endl;
+                cout << "success!." << endl;
 
                 ofScopedLock lock(_mutex);
                 _calendarBuffer = buffer; // lock while we set the buffer
             }
             else
             {
-                //cout << "not successsful." << endl;
+                cout << "not successsful." << endl;
 
             }
         }
